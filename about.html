@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>About</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"></a>
+        <ul>
+             <li><a href="website.html">Go Back</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <center>
+            <h1>About</h1>
+            <div class="img"></div>
+            <p>A computer programmer, <br> called a software developer, <br>a programmer or more recently a <br>coder (especially in more informal<br> contexts),is a person who creates<br> computer software. The term computer<br> programmer can refer to a specialist<br> in one area of computers or to a <br>generalist who writes <br>computer programs.
+            </p>
+            <button class="btn">Contact Us for More Info.</button>
+        </center>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let mountains_front = document.getElementById('mountains_front')
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1.05 +'px';
+            mountains_behind.style.top = value * 0.5 +'px';
+            mountains_front.style.top = value * 0 +'px';
+            text.style.marginRight = value * 3 +'px';
+            text.style.marginTop = value * 1.5 +'px';
+            btn.style.marginTop = value * 2 +'px';
+            header.style.top = value * 0.1 +'px';
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdujabbarof.com</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">_abdujabbarof_</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+    </header>
+
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Welcome!</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Explore Page</h2>
+        <p>Many websites choose to display a short explanatory text in a prominent position of their web page layouts to inform visitors what the purpose of the site is. This introductory text, when crafted well, can help users quickly decide whether they’re in the right place or not. A website has mere seconds to let visitors know that they’ve found what they’re looking for, and your site introduction is your brief elevator pitch towards that.
+        <br><br>We’ll explore the use of website introductory text in various types of websites to gain a better understanding of trends and techniques for effectively designing them. At the end of this article, there’s also a showcase of some excellent web designs that have great website introductory text for our further exploration of the topic.
+        <br><br>There needs to be a purpose for every component of a website. They each have to support the goals and purpose of the site. In this way, a thoughtful approach to the design and the copy of your website introductory text is important.
+        <br><br>Since a site’s introductory text is commonly the first thing a new site visitor will see when they land on your web pages, it’s a great chance to display your company’s personality, just like how your website’s design theme (e.g. dark, clean, grunge, minimalist, etc.) embodies your company’s personality. Below is friendly duck’s site introduction: It’s short, simple, catchy and written with personality.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let mountains_front = document.getElementById('mountains_front')
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1.05 +'px';
+            mountains_behind.style.top = value * 0.5 +'px';
+            mountains_front.style.top = value * 0 +'px';
+            text.style.marginRight = value * 3 +'px';
+            text.style.marginTop = value * 1.5 +'px';
+            btn.style.marginTop = value * 2 +'px';
+            header.style.top = value * 0.1 +'px';
+            
+        })
+    </script>
+
+</body>
+</html>
